@@ -6,8 +6,7 @@
         "start": "ts-node src/app.ts",
         "test": "jest",
         "test:watch": "jest --watch",
-        "debug:app": "node --nolazy --inspect-brk=9229 node_modules/ts-node/dist/bin.js src/app.ts",
-        "djest": "node --nolazy --inspect-brk=9228 node_modules/jest/bin/jest.js --runInBand --coverage false --no-cache"
+        "debug:jest": "node --nolazy --inspect-brk=9228 node_modules/jest/bin/jest.js --runInBand --coverage false --no-cache"
     },
     "dependencies": {
         "@types/jest": "^23.3.14",

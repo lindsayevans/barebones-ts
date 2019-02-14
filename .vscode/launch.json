@@ -5,17 +5,13 @@
             "type": "node",
             "request": "launch",
             "name": "Debug app",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "debug:app"
-            ],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "args": ["${workspaceFolder}/src/app.ts"],
             "env": {
                 "TS_NODE_CACHE": "0"
             },
-            "port": 9229,
-            "sourceMaps": true
+            "sourceMaps": true,
+            "protocol": "inspector"
         },
         {
             "type": "node",

@@ -1,6 +1,6 @@
 {
     "name": "barebones-ts",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Barebones ts-node script",
     "scripts": {
         "start": "ts-node src/app.ts",

@@ -1,33 +1,22 @@
 {
-  "name": "barebones-ts",
-  "version": "1.0.0",
-  "description": "Barebones ts-node script",
-  "scripts": {
-    "start": "bin/ts-node index.ts",
-    "test": "bin/test"
-  },
-  "dependencies": {
-    "@types/jest": "^q23.3.9",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.4",
-    "ts-node": "^7.0.1",
-    "tsconfig-paths": "^3.7.0",
-    "typescript": "^3.1.6"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "testMatch": [
-      "<rootDir>/**/?(*.)test.ts"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "./tsconfig.json"
-      }
+    "name": "barebones-ts",
+    "version": "0.0.1",
+    "description": "Barebones ts-node script",
+    "scripts": {
+        "start": "ts-node src/app.ts",
+        "build": "tsc",
+        "clean": "rimraf dist",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "devDependencies": {
+        "@types/jest": "^23.3.14",
+        "@types/node": "^10.14.1",
+        "jest": "^23.6.0",
+        "rimraf": "^2.6.3",
+        "ts-jest": "^23.10.5",
+        "ts-node": "^7.0.1",
+        "tsconfig-paths": "^3.8.0",
+        "typescript": "^3.3.3333"
     }
-  }
 }

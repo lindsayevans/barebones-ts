@@ -19,6 +19,13 @@
         "noUnusedLocals": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "src/**/*.test.ts"
+    ]
 }

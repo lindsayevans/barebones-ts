@@ -1,17 +1,19 @@
 {
     "name": "barebones-ts",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "Barebones ts-node script",
     "scripts": {
         "start": "ts-node src/app.ts",
+        "build": "tsc",
+        "clean": "rimraf dist",
         "test": "jest",
-        "test:watch": "jest --watch",
-        "debug:jest": "node --nolazy --inspect-brk=9228 node_modules/jest/bin/jest.js --runInBand --coverage false --no-cache"
+        "test:watch": "jest --watch"
     },
-    "dependencies": {
+    "devDependencies": {
         "@types/jest": "^23.3.14",
         "@types/node": "^10.14.1",
         "jest": "^23.6.0",
+        "rimraf": "^2.6.3",
         "ts-jest": "^23.10.5",
         "ts-node": "^7.0.1",
         "tsconfig-paths": "^3.8.0",

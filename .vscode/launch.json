@@ -17,13 +17,13 @@
             "type": "node",
             "request": "launch",
             "name": "Debug tests",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "debug:jest"
-            ],
-            "port": 9228
+            "runtimeArgs": ["--nolazy"],
+            "args": ["${workspaceFolder}/node_modules/jest/bin/jest.js"],
+            "env": {
+                "TS_NODE_CACHE": "0"
+            },
+            "sourceMaps": true,
+            "protocol": "inspector"
         }
     ]
 }

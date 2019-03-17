@@ -6,7 +6,7 @@
 
 1. Switch node version: `nvm use`
 2. Install dependencies: `npm i`
-3. Run the script: `npm start`
+3. Run the script: `npm start` or `npm run watch`
 4. Run the tests: `npm test` or `npm run test:watch`
 5. Debug app or Jest using VS Code debug tools
 

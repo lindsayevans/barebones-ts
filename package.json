@@ -8,7 +8,9 @@
         "build": "tsc",
         "clean": "rimraf dist",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "typecheck": "tsc --noEmit",
+        "typecheck:watch": "tsc -w --noEmit"
     },
     "devDependencies": {
         "@types/jest": "^23.3.14",

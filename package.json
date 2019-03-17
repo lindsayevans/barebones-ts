@@ -4,6 +4,7 @@
     "description": "Barebones ts-node script",
     "scripts": {
         "start": "ts-node src/app.ts",
+        "watch": "tsnd --respawn src/app.ts",
         "build": "tsc",
         "clean": "rimraf dist",
         "test": "jest",
@@ -16,6 +17,7 @@
         "rimraf": "^2.6.3",
         "ts-jest": "^23.10.5",
         "ts-node": "^7.0.1",
+        "ts-node-dev": "^1.0.0-pre.32",
         "tsconfig-paths": "^3.8.0",
         "typescript": "^3.3.3333"
     }

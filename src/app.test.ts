@@ -1,21 +1,18 @@
-import { add, addAsync } from './app'
+import { describe, it } from "node:test";
+import assert from "node:assert";
 
-describe('Foo library', () => {
+import { add, addAsync } from "./app.ts";
 
-    it('adds numbers', () => {
+describe("Foo library", () => {
+    it("adds numbers", () => {
+        const result = add(123, 321);
 
-        const result = add(123, 321)
+        assert.equal(result, 444);
+    });
 
-        expect(result).toEqual(444)
+    it("adds numbers asynchronously", async () => {
+        const result = await addAsync(123, 321);
 
-    })
-
-    it('adds numbers asynchronously', async () => {
-
-        const result = await addAsync(123, 321)
-
-        expect(result).toEqual(444)
-
-    })
-
-})
+        assert.equal(result, 444);
+    });
+});

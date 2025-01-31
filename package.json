@@ -1,26 +1,25 @@
 {
     "name": "barebones-ts",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Barebones ts-node script",
+    "type": "module",
     "scripts": {
-        "start": "ts-node src/app.ts",
-        "watch": "tsnd --respawn src/app.ts",
+        "start": "node --experimental-strip-types src/app.ts",
+        "watch": "node --experimental-strip-types --watch src/app.ts",
         "build": "tsc",
         "clean": "rimraf dist",
-        "test": "jest",
-        "test:watch": "jest --watch",
+        "test": "node --experimental-strip-types --test **/*.test.{mts,ts}",
+        "test:watch": "node --experimental-strip-types --test --watch **/*.test.{mts,ts}",
         "typecheck": "tsc --noEmit",
         "typecheck:watch": "tsc -w --noEmit"
     },
     "devDependencies": {
-        "@types/jest": "^23.3.14",
-        "@types/node": "^10.14.1",
-        "jest": "^23.6.0",
-        "rimraf": "^2.6.3",
-        "ts-jest": "^23.10.5",
-        "ts-node": "^7.0.1",
-        "ts-node-dev": "^1.0.0-pre.32",
-        "tsconfig-paths": "^3.8.0",
-        "typescript": "^3.3.3333"
-    }
+        "@types/node": "^22.12.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.7.3"
+    },
+    "engines": {
+        "node": ">=22.6"
+    },
+    "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

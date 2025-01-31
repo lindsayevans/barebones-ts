@@ -1,31 +1,23 @@
 {
+    "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "lib": [
-            "es6",
-            "dom",
-            "esnext.asynciterable"
-        ],
-        "sourceMap": true,
-        "allowJs": false,
-        "baseUrl": ".",
-        "moduleResolution": "node",
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "noUnusedLocals": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
         "esModuleInterop": true,
-        "outDir": "dist"
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "noEmit": true,
+        "types": ["node"],
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "incremental": true
     },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-        "src/**/*.test.ts"
-    ]
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", " **/*.test.{mts,ts}"]
 }

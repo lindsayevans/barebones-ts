@@ -5,15 +5,19 @@
 ## Usage
 
 1. Switch node version: `nvm use`
-2. Install dependencies: `npm i`
-3. Run the script: `npm start` or `npm run watch`
-4. Run the tests: `npm test` or `npm run test:watch`
-5. Debug app or Jest using VS Code debug tools
+2. Install dependencies: `pnpm i`
+3. Run the script: `pnpm start` or `pnpm watch`
+4. Run the tests: `pnpm test` or `pnpm test:watch`
+5. Debug app or tests using VS Code debug tools
 
 ## Differences
 
-* NVM
-* No Yarn
-* NPM scripts instead of Bash
-* Watch modes
-* VS Code debugging
+-   NVM, PNPM
+-   NPM scripts instead of Bash
+-   Experimental [Node type stripping](https://nodejs.org/docs/latest/api/typescript.html#type-stripping)
+-   VS Code debugging
+
+## TODO
+
+-   Get build working
+-   Add Biome

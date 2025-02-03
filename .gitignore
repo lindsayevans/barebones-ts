@@ -16,3 +16,5 @@ dump.rdb
 .node-xmlhttprequest-sync-*
 
 dist
+
+.swc

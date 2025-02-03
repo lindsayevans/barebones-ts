@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import { add, addAsync } from "./app.ts";
+import { add, addAsync } from "../app.ts";
 
 describe("Foo library", () => {
     it("adds numbers", () => {

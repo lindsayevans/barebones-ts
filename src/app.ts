@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import { Foo } from "./models/Foo.ts";
 
 export function add(a: number, b: number): number {
     return a + b;
@@ -12,6 +13,10 @@ export async function addAsync(a: number, b: number): Promise<number> {
 const result = add(1, 2);
 console.log(`Result of add(1, 2) = ${result}`);
 
-const pkg = fs.readFileSync("./README.md");
+const readme = fs.readFileSync("./README.md");
 console.log("Contents of README.md:");
-console.log(pkg.toString());
+console.log(readme.toString());
+
+const foo = new Foo();
+foo.name = "LinZ";
+console.log(foo);

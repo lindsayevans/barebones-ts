@@ -9,6 +9,7 @@
 3. Run the script: `pnpm start` or `pnpm watch`
 4. Run the tests: `pnpm test` or `pnpm test:watch`
 5. Debug app or tests using VS Code debug tools
+6. Build
 
 ## Differences
 
@@ -16,8 +17,8 @@
 -   NPM scripts instead of Bash
 -   Experimental [Node type stripping](https://nodejs.org/docs/latest/api/typescript.html#type-stripping)
 -   VS Code debugging
+-   SWC for building
 
 ## TODO
 
--   Get build working
 -   Add Biome

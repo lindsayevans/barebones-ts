@@ -13,11 +13,12 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "noEmit": true,
+        "emitDeclarationOnly": true,
+        "declaration": true,
         "types": ["node"],
         "allowImportingTsExtensions": true,
-        "verbatimModuleSyntax": true,
-        "incremental": true
+        "verbatimModuleSyntax": true
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "dist", " **/*.test.{mts,ts}"]
+    "include": ["src/**/*.ts", "src/app.ts"],
+    "exclude": ["node_modules", "dist", "src/**/*.test.ts"]
 }

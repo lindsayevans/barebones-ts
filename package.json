@@ -4,16 +4,20 @@
     "description": "Barebones ts-node script",
     "type": "module",
     "scripts": {
-        "start": "node --experimental-strip-types src/app.ts",
-        "watch": "node --experimental-strip-types --watch src/app.ts",
-        "build": "tsc",
+        "start": "NODE_NO_WARNINGS=1 node --experimental-strip-types src/app.ts",
+        "watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --watch src/app.ts",
+        "build": "swc ./src -d ./dist/ --strip-leading-paths --ignore **/*.test.ts",
+        "build:types": "tsc --emitDeclarationOnly --noEmit false",
         "clean": "rimraf dist",
-        "test": "node --experimental-strip-types --test **/*.test.{mts,ts}",
-        "test:watch": "node --experimental-strip-types --test --watch **/*.test.{mts,ts}",
+        "test": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test ./src/**/*.test.ts",
+        "test:watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test --watch **/*.test.{mts,ts}",
         "typecheck": "tsc --noEmit",
         "typecheck:watch": "tsc -w --noEmit"
     },
     "devDependencies": {
+        "@swc/cli": "^0.6.0",
+        "@swc/core": "^1.10.12",
+        "@swc/plugin-transform-imports": "^6.4.0",
         "@types/node": "^22.12.0",
         "rimraf": "^6.0.1",
         "typescript": "^5.7.3"

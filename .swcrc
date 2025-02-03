@@ -1,40 +1,40 @@
 {
-    "$schema": "https://swc.rs/schema.json",
-    "module": {
-        "type": "es6",
-        "resolveFully": true
-        // Not working - using plugin-transform-imports instead:
-        // https://github.com/swc-project/swc/discussions/9016#discussioncomment-10308208
-        // https://github.com/swc-project/swc/discussions/9016#discussioncomment-11640979
-        // "outFileExtension": "js"
-    },
-    "jsc": {
-        "parser": {
-            "syntax": "typescript",
-            "jsx": false,
-            "dynamicImport": false,
-            "privateMethod": false,
-            "functionBind": false,
-            "exportDefaultFrom": false,
-            "exportNamespaceFrom": false,
-            "decorators": false,
-            "decoratorsBeforeExport": false,
-            "topLevelAwait": false,
-            "importMeta": false
-        },
-        "target": "esnext",
-        "experimental": {
-            "plugins": [
-                [
-                    "@swc/plugin-transform-imports",
-                    {
-                        "^(.*?)\\.ts(x)?$": {
-                            "skipDefaultConversion": true,
-                            "transform": "{{matches.[1]}}.js"
-                        }
-                    }
-                ]
-            ]
-        }
-    }
+	"$schema": "https://swc.rs/schema.json",
+	"module": {
+		"type": "es6",
+		"resolveFully": true
+		// Not working - using plugin-transform-imports instead:
+		// https://github.com/swc-project/swc/discussions/9016#discussioncomment-10308208
+		// https://github.com/swc-project/swc/discussions/9016#discussioncomment-11640979
+		// "outFileExtension": "js"
+	},
+	"jsc": {
+		"parser": {
+			"syntax": "typescript",
+			"jsx": false,
+			"dynamicImport": false,
+			"privateMethod": false,
+			"functionBind": false,
+			"exportDefaultFrom": false,
+			"exportNamespaceFrom": false,
+			"decorators": false,
+			"decoratorsBeforeExport": false,
+			"topLevelAwait": false,
+			"importMeta": false
+		},
+		"target": "esnext",
+		"experimental": {
+			"plugins": [
+				[
+					"@swc/plugin-transform-imports",
+					{
+						"^(.*?)\\.ts(x)?$": {
+							"skipDefaultConversion": true,
+							"transform": "{{matches.[1]}}.js"
+						}
+					}
+				]
+			]
+		}
+	}
 }

@@ -1,18 +1,18 @@
 {
-    "name": "barebones-ts",
-    "version": "2.0.0",
-    "description": "Barebones ts-node script",
-    "type": "module",
-    "scripts": {
-        "start": "NODE_NO_WARNINGS=1 node --experimental-strip-types src/app.ts",
-        "watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --watch src/app.ts",
-        "build": "swc ./src -d ./dist/ --strip-leading-paths --ignore **/*.test.ts",
-        "build:types": "tsc --emitDeclarationOnly --noEmit false",
-        "clean": "rimraf dist",
-        "test": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test ./src/**/*.test.ts",
-        "test:watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test --watch **/*.test.{mts,ts}",
-        "typecheck": "tsc --noEmit",
-        "typecheck:watch": "tsc -w --noEmit",
+	"name": "barebones-ts",
+	"version": "2.0.0",
+	"description": "Barebones ts-node script",
+	"type": "module",
+	"scripts": {
+		"start": "NODE_NO_WARNINGS=1 node --experimental-strip-types src/app.ts",
+		"watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --watch src/app.ts",
+		"build": "swc ./src -d ./dist/ --strip-leading-paths --ignore **/*.test.ts",
+		"build:types": "tsc --emitDeclarationOnly --noEmit false",
+		"clean": "rimraf dist",
+		"test": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test ./src/**/*.test.ts",
+		"test:watch": "NODE_NO_WARNINGS=1 node --experimental-strip-types --test --watch **/*.test.{mts,ts}",
+		"typecheck": "tsc --noEmit",
+		"typecheck:watch": "tsc -w --noEmit",
 		"check": "biome check",
 		"format": "biome format",
 		"lint": "biome lint",
@@ -22,22 +22,22 @@
 		"check:unsafe": "biome check --write --unsafe",
 		"format:unsafe": "biome format --write --unsafe",
 		"lint:unsafe": "biome lint --write --unsafe"
-    },
+	},
 	"lint-staged": {
 		"*.{json,ts,tsx,scss}": ["biome check --write --no-errors-on-unmatched"]
 	},
-    "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
-        "@swc/cli": "^0.6.0",
-        "@swc/core": "^1.10.12",
-        "@swc/plugin-transform-imports": "^6.4.0",
-        "@types/node": "^22.12.0",
-        "lint-staged": "^15.4.3",
-        "rimraf": "^6.0.1",
-        "typescript": "^5.7.3"
-    },
-    "engines": {
-        "node": ">=22.6"
-    },
-    "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@swc/cli": "^0.6.0",
+		"@swc/core": "^1.10.12",
+		"@swc/plugin-transform-imports": "^6.4.0",
+		"@types/node": "^22.12.0",
+		"lint-staged": "^15.4.3",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.7.3"
+	},
+	"engines": {
+		"node": ">=22.6"
+	},
+	"packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

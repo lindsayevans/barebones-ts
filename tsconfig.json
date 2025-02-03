@@ -1,24 +1,24 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "compilerOptions": {
-        "target": "ES2022",
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "strict": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "resolveJsonModule": true,
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "noEmit": true,
-        "emitDeclarationOnly": true,
-        "declaration": true,
-        "types": ["node"],
-        "allowImportingTsExtensions": true,
-        "verbatimModuleSyntax": true
-    },
-    "include": ["src/**/*.ts", "src/app.ts"],
-    "exclude": ["node_modules", "dist", "src/**/*.test.ts"]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"noEmit": true,
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"types": ["node"],
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["src/**/*.ts", "src/app.ts"],
+	"exclude": ["node_modules", "dist", "src/**/*.test.ts"]
 }

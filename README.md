@@ -18,7 +18,4 @@
 -   Experimental [Node type stripping](https://nodejs.org/docs/latest/api/typescript.html#type-stripping)
 -   VS Code debugging
 -   SWC for building
-
-## TODO
-
--   Add Biome
+-   Biome for linting & formatting & so on
